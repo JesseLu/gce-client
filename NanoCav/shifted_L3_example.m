@@ -8,6 +8,9 @@ function shifted_L3_example(filename, grid_shape, a, omega, fwhm, num_iters)
 %         photonic crystal, Nature 2003.
 %   
 %     Used as a validation of both gce and NanoCav in the spring of 2011.
+%
+%     To obtain the fundamental resonant mode, use:
+%         shifted_L3_example('jesselu_L3.h5', [300 220 100], 20, 0.08116, 0.02, 10000);
 
     %
     % Structure parameters.

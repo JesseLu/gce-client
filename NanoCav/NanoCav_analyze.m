@@ -2,7 +2,17 @@ function NanoCav_analyze(filename, w, t_cutoff)
 % NANOCAV_ANALYZE(FILENAME, W, T_CUTOFF)
 % 
 % Description
-%     Output the results of a simulation defined by Nanocav_make().
+%     Output the results of a simulation defined by Nanocav_make(). 
+%
+% Inputs
+%     FILENAME: Character string.
+%         Name of file containing the simulated gce model.
+% 
+%     W: Number.
+%         Frequency of interest (estimated frequency of the mode).
+% 
+%     T_CUTOFF: Positive number.
+%         Ignores the field values before T_CUTOFF.
 
     %
     % Two dimensional plot of the last slice field.
