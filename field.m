@@ -69,5 +69,5 @@ H5F.close(file);
     % Write the relevant space data: offset and pitch.
     %
 
-write_attribute(GCE_FILENAME, 'offset', dset_name, single(sp.offset));
-write_attribute(GCE_FILENAME, 'pitch', dset_name, single(sp.pitch));
+hdf5_attribute(GCE_FILENAME, 'offset', dset_name, single(sp.offset));
+hdf5_attribute(GCE_FILENAME, 'pitch', dset_name, single(sp.pitch));
