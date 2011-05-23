@@ -4,7 +4,7 @@ function SubGrid_make(filename, epsilon, sub_kappa, sub_pos, sub_epsilon, ...
 %     D_PML, NUM_ITERS, CURRENT_SOURCES)
 % 
 % Description
-%     Creates an electromagnetic with a subgridded, high-resolution area.
+%     Creates an electromagnetic grid with a subgridded, high-resolution area.
 
 
     % 
