@@ -1,0 +1,13 @@
+SubGrid is a gce app that implements subgridding to an electromagnetic FDTD 
+simulation. The subgridding method used is published in the following paper:
+    Chevalier, Luebbers, and Cable, "FDTD Local Grid with Material Traverse,"
+    IEEE Transactions on Antennas and Propagation, Vol 45 (1997).
+
+Quickstart
+----------
+example1('empty_subgrid_example.h5', 3); % Create simulation with 3:1 subgrid.
+
+% Simulate with gce...
+
+% Watch main-grid and subgrid movie.
+SubGrid_analyze('empty_subgrid_example.h5', [50 50 50], 3, 1, 0);
