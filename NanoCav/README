@@ -1,0 +1,13 @@
+NanoCav is a gce app written to simulate 3D nanophotonic cavities.
+
+An example of a shifted L3 photonic crystal cavity is provided.
+
+To execute the example, use the following Matlab commands:
+
+% Create the simulation.
+shifted_L3_example('L3_narrow.h5', [300 220 100], 20, 0.08116, 0.002, 30000);
+
+% Simulate...
+
+% Analyze data (mostly compute Q-factors).
+NanoCav_analyze('L3_narrow.h5', 0.08, 12000)
