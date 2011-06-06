@@ -6,7 +6,11 @@ function NanoCav_make(filename, epsilon, d_pml, num_iters, ...
 %     Uses gce (Grid Compute Engine) to set up a nanophotonic resonator 
 %     simulation.
 % 
-% Reference: Taflove and Hagness, Computational Electrodynamics (2005).
+% References: 
+%     Taflove and Hagness, Computational Electrodynamics (2005), also see  
+%     http://bit.ly/lUh4gF for a description of the primitive Yee cell used.
+%     Unshortened link: https://github.com/JesseLu/misc/blob/master/scribblings/primitive%20yee%20cell.pdf?raw=true
+%     
 
 
     % 

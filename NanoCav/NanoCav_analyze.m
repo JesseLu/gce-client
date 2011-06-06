@@ -1,5 +1,5 @@
-function NanoCav_analyze(filename, w, t_cutoff)
-% NANOCAV_ANALYZE(FILENAME, W, T_CUTOFF)
+function NanoCav_analyze(filename, w, t_cutoff, qcalc_option)
+% NANOCAV_ANALYZE(FILENAME, W, T_CUTOFF, QCALC_OPTION)
 % 
 % Description
 %     Output the results of a simulation defined by Nanocav_make(). 
@@ -13,12 +13,16 @@ function NanoCav_analyze(filename, w, t_cutoff)
 % 
 %     T_CUTOFF: Positive number.
 %         Ignores the field values before T_CUTOFF.
+%
+%     QCALC_OPTION: Boolean.
+%         If true, calculates the Q-factors of the mode. 
+%         If false, do not perform Q-calculation.
 
     %
     % Two dimensional plot of the last slice field.
     %
 
-figure(1);
+figure(1); subplot 111;
 slice = hdf5read(filename, 'fields/slice'); % Read slice from hdf5 file.
 slice = squeeze(slice(:,:,:,end)); % Obtain the last slice (in time).
 imagesc(slice, max(abs(slice(:))) * [-1 1]); % Plot.
@@ -41,5 +45,7 @@ drawnow;
     % Fit energy and power and compute quality factors.
     %
 
-NanoCav_compute_Q(filename, t_cutoff, [3 4])
+if qcalc_option
+    NanoCav_compute_Q(filename, t_cutoff, [3 4])
+end
 

@@ -4,10 +4,33 @@ An example of a shifted L3 photonic crystal cavity is provided.
 
 To execute the example, use the following Matlab commands:
 
-% Create the simulation.
-shifted_L3_example('L3_narrow.h5', [300 220 100], 20, 0.08116, 0.002, 30000);
+% Make sure that we add the path to the gce-client package.
+path(path, 'path-to-gce-client'); % For example: path(path, '..');
+
+
+    % 
+    % Simulation #1: Excite with broadband source.
+    %
+
+% First, we create a simulation with a broadband source.
+shifted_L3_example('L3_broad.h5', [300 220 100], 20, 0.08, 0.02, 30000);
+
+% Simulate and save the result to L3_broad.h5 (overwrite the initial file).
+
+% Analyze the frequency response. Two peaks should be observed on the spectrum,
+% we are interested in the lower energy (fundamental) mode at w = 0.08132.
+NanoCav_analyze('L3_broad.h5', 0.08, 1000, false)
+
+    
+    %
+    % Siulation #2: Excite with narrowband source.
+    %
+
+% Create the simulation with a narrowband source centered at 0.08132.
+shifted_L3_example('L3_narrow.h5', [300 220 100], 20, 0.08132, 0.002, 30000);
 
 % Simulate...
 
-% Analyze data (mostly compute Q-factors).
-NanoCav_analyze('L3_narrow.h5', 0.08, 12000)
+% Analyze data, and this time compute the Q-factors.
+% A total Q-factor of *** should be observed.
+NanoCav_analyze('L3_narrow.h5', 0.08, 12000, true)
