@@ -6,6 +6,28 @@ function NanoCav_make(filename, epsilon, d_pml, num_iters, ...
 %     Uses gce (Grid Compute Engine) to set up a nanophotonic resonator 
 %     simulation.
 % 
+% Inputs
+%     FILENAME: Character string.
+%         Name of the hdf5 file to be created. FILENAME should end in .h5
+% 
+%     EPSILON: 3-element cell array.
+%         Cell array holding the values of epsilon_x, epsilon_y, and epsilon_z.
+% 
+%     D_PML: Positive integer.
+%         Thickness (in number of grid points) of the PML absorbing boundaries.
+% 
+%     NUM_ITERS: Positive integer.
+%         Number of iterations with which to run the simulation.
+% 
+%     SOURCE: 2-element vector.
+%         SOURCE consists of [OMEGA, FWHM], where OMEGA is the angular frequency
+%         and FWHM is the ful-width-half-maximum of the current source placed at
+%         the center of the grid. This current source has an Ey-orientation.
+% 
+%     IN_PLANE_HEIGHT: Positive integer.
+%         Height (in terms of grid points) of the central radiating power strip,
+%         used to calculate the in-plane Q-factor.
+% 
 % References: 
 %     Taflove and Hagness, Computational Electrodynamics (2005), also see  
 %     http://bit.ly/lUh4gF for a description of the primitive Yee cell used.

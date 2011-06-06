@@ -23,14 +23,14 @@ NanoCav_analyze('L3_broad.h5', 0.08, 1000, false)
 
     
     %
-    % Siulation #2: Excite with narrowband source.
+    % Simulation #2: Excite with narrowband source.
     %
 
 % Create the simulation with a narrowband source centered at 0.08132.
 shifted_L3_example('L3_narrow.h5', [300 220 100], 20, 0.08132, 0.002, 30000);
 
-% Simulate...
+% Simulate and save the result to L3_narrow.h5 (overwrite the initial file).
 
 % Analyze data, and this time compute the Q-factors.
-% A total Q-factor of *** should be observed.
-NanoCav_analyze('L3_narrow.h5', 0.08, 12000, true)
+% A vertical Q-factor of ~ 48,000 should be observed.
+NanoCav_analyze('L3_narrow.h5', 0.08, 13000, true)
