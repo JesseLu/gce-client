@@ -5,9 +5,10 @@ simulation. The subgridding method used is published in the following paper:
 
 Quickstart
 ----------
-example1('empty_subgrid_example.h5', 3); % Create simulation with 3:1 subgrid.
+% Create simulation with 3:1 subgrid.
+empty_subgrid_example('subgrid_example.h5', 3); 
 
 % Simulate with gce...
 
 % Watch main-grid and subgrid movie.
-SubGrid_analyze('empty_subgrid_example.h5', [50 50 50], 3, 1, 0);
+SubGrid_analyze('subgrid_example.h5', [50 50 50], 3, 1, 0);
