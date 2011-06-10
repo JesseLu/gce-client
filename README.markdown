@@ -23,13 +23,13 @@ Now, let's try the tutorial! Execute the following commands in Matlab:
 
     cd tutorial
     path(path, '..'); % Include the gce-client files.
-    thermal_example('first_gce_sim.h5'); % Run the tutorial.
+    thermal_example % Run the tutorial.
 
 You should now have a file called `first_gce_sim.h5` in the current directory. Use your web browser to go to [brainiac5.stanford.edu](http://brainiac5.stanford.edu) and follow the instructions to simulate it there.
 
 Once the simulation has completed and you've downloaded the simulated file to the current Matlab directory, plot a pretty movie of the results using
 
-    thermal_plot('first_gce_sim.h5'); % Make sure that this is the simulated file!
+    thermal_plot('downloaded-file.h5'); % Make sure that this is the simulated file!
 
 Making your own gce simulation
 ------------------------------
