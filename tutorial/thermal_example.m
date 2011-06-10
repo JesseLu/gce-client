@@ -15,12 +15,19 @@ help thermal_example % Print out the help message
 path(path, '..'); % Tell Matlab to look in the gce-client directory.
 
 
-% Initialize gce simulation.
+    %
+    % Initialize the gce simulation.
+    %
+
+% Initialize gce simulation: The gce simulation will be saved to a new file 
+% named 'gce_thermal_example.h5' (it will overwrite existing files), 
+% and this simulation will run for 10,001 time steps.
 gce_start('gce_thermal_example.h5', 0 : 1e4);
 
-% Initial conditions.
-u0 = zeros([100 100 100]);
-u0(20:80, 40:60, 40:60) = 1;
+% Initial conditions: Create a matlab variable (3D array) with the initial
+% temperatures of the system.
+u0 = zeros([100 100 100]); % Zero everywhere.
+u0(20:80, 40:60, 40:60) = 1; % Except in this cube.
 
 
 % Set-up field
