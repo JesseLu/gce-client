@@ -1,4 +1,5 @@
 function [code] = my_import(filename, varargin)
+% Imports code from a text file, replaces terms as necessary.
 
 fid = fopen(filename, 'r');
 code = fread(fid, 'uint8=>char');
@@ -13,4 +14,5 @@ for k = 2 : 2 : length(varargin)
     end
 
 end
-% fprintf('%s', code);
+
+% fprintf('%s', code); % Use this to debug.

@@ -60,6 +60,7 @@ update({'Hx', 'Hy', 'Hz'}, H_update_code, dt, sp, 4, mg_t);
     %
     % Insert the subgrid.
     %
+
 sg_space = space(sub_pos, size(sub_epsilon{1})/sub_kappa);
 sg_E = SubGrid_insert('sub', sg_space, sub_kappa, mg_t, dt, [0.8 0.95]);
 
