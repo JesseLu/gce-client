@@ -9,7 +9,7 @@ How does gce work?
 ------------------
 gce allows users to specify their simulation in Matlab using the gce-client collection of matlab files in this directory. All that is needed is a valid installation of Matlab.
 
-Once a simulation is specified, it can be executed on a _gce server_. A simple, [public server](brainiac5.stanford.edu) is provided by the Jelena Vuckovic group.
+Once a simulation is specified, it can be executed on a _gce server_. A simple, [public server](http://brainiac5.stanford.edu) is provided by the Jelena Vuckovic group.
 
 What do I need to get started?
 ------------------------------
