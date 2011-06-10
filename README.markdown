@@ -16,6 +16,7 @@ What do I need to get started?
 1.  Download [gce-client](https://github.com/JesseLu/gce-client)
 2.  Unzip it into a directory (e.g. /gce-client).
 3.  Start Matlab and run the following commands:
-        c1
-        c2
-        c3
+
+    c1
+    c2
+    c3
