@@ -15,7 +15,20 @@ What do I need to get started?
 ------------------------------
 1.  Download [gce-client](https://github.com/JesseLu/gce-client)
 2.  Unzip it into a directory (e.g. /gce-client).
+<<<<<<< HEAD:README.markdown
 3.  Start Matlab (and change working directory to /gce-client)
 
 Now, it's probably best to 
 4.  Run the `path(path, '.')` command to access 
+=======
+3.  Start Matlab and run the following commands:
+
+    c1
+    c2
+    c3
+
+Hmmm, difficult to get code block to work....
+
+    Try again?
+    yup yp
+>>>>>>> de427765d3f628cb0dea18b1a3865559f97adb77:README.markdown
