@@ -15,20 +15,33 @@ What do I need to get started?
 ------------------------------
 1.  Download [gce-client](https://github.com/JesseLu/gce-client)
 2.  Unzip it into a directory (e.g. /gce-client).
-<<<<<<< HEAD:README.markdown
 3.  Start Matlab (and change working directory to /gce-client)
 
-Now, it's probably best to 
-4.  Run the `path(path, '.')` command to access 
-=======
-3.  Start Matlab and run the following commands:
+Running the  tutorial
+---------------------
+Now, let's try the tutorial! Execute the following commands in Matlab:
 
-    c1
-    c2
-    c3
+    cd tutorial
+    path(path, '..'); % Include the gce-client files.
+    thermal_example('first_gce_sim.h5'); % Run the tutorial.
 
-Hmmm, difficult to get code block to work....
+You should now have a file called `first_gce_sim.h5` in the current directory. Use your web browser to go to [brainiac5.stanford.edu](http://brainiac5.stanford.edu) and follow the instructions to simulate it there.
 
-    Try again?
-    yup yp
->>>>>>> de427765d3f628cb0dea18b1a3865559f97adb77:README.markdown
+Once the simulation has completed and you've downloaded the simulated file to the current Matlab directory, plot a pretty movie of the results using
+
+    thermal_plot('first_gce_sim.h5'); % Make sure that this is the simulated file!
+
+Making your own gce simulation
+------------------------------
+Now you're ready to do FDTD simulation really quickly. To make your own gce simulation, 
+
+1.  Look at the code in `thermal_example.m`, and
+2.  Read the rules for gce operations in `OP_RULES.markdown`.
+
+Good luck!
+
+Contact info
+------------
+You may email jesselu at stanford dot edu for additional help.
+
+
