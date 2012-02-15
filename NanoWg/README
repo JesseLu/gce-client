@@ -11,7 +11,7 @@ Or, you can see the fundamental mode shift for different k-values:
     for k = 0 : 6; simple_wg_example([num2str(k), '_6.h5'], [10 100 100], .05, .1, 20000, k*pi/6); end % Describe.
     system('scp *_6.h5 gce_demo@brainiac5.stanford.edu:in/') % Simulate.
     system('scp gce_demo@brainiac5.stanford.edu:demo1/out/*_6.h5 .') % Download after simulation done.
-    for k = 0 : 6; NanoWg_analyze([num2str(k), '_6.h5', .05, 1000, true); end % Analyze.
+    for k = 0 : 6; NanoWg_analyze([num2str(k), '_6.h5'], .05, 1000, true); pause; end % Analyze.
 
 If you look at the NanoWg_analyze code, you will see that we
 simulate both real and imaginary parts of the E- and H-fields.
